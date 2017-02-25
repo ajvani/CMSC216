@@ -2,7 +2,9 @@
 ##Making it work
 ###Setup
 ```
-$ git clone https://github.com/ajvani/CMSC216.git && rm -rf ./.vimrc ./.vim && cp ./CMSC216/vim ./.vim && echo "exec ./.vim/vimrc" >> ./.vimrc && rm -rf ./CMSC216
+$ git clone https://github.com/ajvani/CMSC216.git &&\
+rm -rf ~/.vimrc ~/.vim && cp -rf ~/CMSC216/vim ~/.vim\
+&& cp ~/.vim/vimrc ~/.vimrc && rm -rf ~/CMSC216 ./.vim/vimrc
 ```
 
 ###Basic Vim Instructions
@@ -19,6 +21,7 @@ Don't know vim? Here's a basic instructional
 
 ##Features
 ###Initial Note
+- Unfortunately grace only has Vim 7, so I tried my best to make this work really well
 - If you do not like any of the following that are marked "PLUGIN", you can remove them by running the following command: 
 ```
 $ rm -rf ~/.vim/bundle/<plugin_name>
@@ -57,4 +60,6 @@ $ rm -rf ~/.vim/bundle/<plugin_name>
 - This the tabs up top that show your buffers.
 - Official github repo: https://github.com/ap/vim-buftabline
 
-
+###Lightline(PLUGIN)
+- This is the status line at the bottom which looks better than the traditional one
+- Official github repo: https://github.com/itchyny/lightline.vim

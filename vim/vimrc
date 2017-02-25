@@ -69,3 +69,4 @@ nnoremap q :bp\|bd #<CR>
 let g:solarize_termcolors=256
 set background=dark
 colorscheme solarized
+
