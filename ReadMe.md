@@ -36,12 +36,19 @@ $ rm -rf ~/.vim/bundle/<plugin_name>
 - Use `<Ctrl-O>` and `<Ctrl-P>` to move between buffers, and `<q>` to quit out of a buffer
 
 ###Color Theme(PLUGIN)
-- I use vim-colors-solarized as my theme. This theme won't work well with terminal because of default color configuration. 
-- I use iterm and use their solarized theme, so it looks really nice for me.
-- If you dont want to use iterm here are a few options: 
+- I use vim-colors-solarized as my theme
+    + I give instructions for Solarized Dark, you can use light if you prefer a lighter theme, just replace every 'dark' with 'light' and replace `set background=dark` with `set background=light` in ~/.vimrc
+- This theme does not look good by default
+- Options (For PC)
+    + If you use MobaXterm do this: 
+        * Settings > Configuration > Terminal > Default colors scheme: "Solarized dark"
+- Options (For UNIX)
+    + Download iterm2
+        * Preferences > Profiles > Colors > Color Presets: Solarized Dark
     + Download a solarized theme for Mac Terminal ([here](https://github.com/tomislav/osx-terminal.app-colors-solarized) is one that works)
-        * NOTE: I don't really like this because it messes up the syntax colors, but up to you. 
-    + Remove or comment out these lines in .vimrc (REMOVES SOLARIZED SYNTAX HIGHLIGHTING FROM VIM):
+        * NOTE: I don't really like this because the syntax coloring is a little off, but up to you. 
+    + Just don't use solarized theme:
+        * Remove following lines from ~/.vimrc 
 
         ``` 
         let g:solarize_termcolors=256
@@ -49,6 +56,7 @@ $ rm -rf ~/.vim/bundle/<plugin_name>
         colorscheme solarized
         ```
 
+        * Run `$ rm -rf ~/.vim/bundle/vim-colors-solarized`
     + Edit every single color in the terminal settings to match the solarized color format. (Pls don't do this, it's a waste of time)
 - If you want a different color theme, you can find a different one and git clone it into `~/.vim/bundle`
 - Official github repo: https://github.com/altercation/vim-colors-solarized

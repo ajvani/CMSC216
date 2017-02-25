@@ -59,6 +59,7 @@ let g:lightline = {
     \ 'colorscheme': 'wombat',
     \ }
 set noshowmode
+set t_Co=256
 
 " Mapping buffer shortcuts
 map <silent> <C-o> :bp<CR>
