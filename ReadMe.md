@@ -6,7 +6,7 @@ I made this repository basically to hold my CMSC216 class notes, but I guess I c
 ```
 $ git clone https://github.com/ajvani/CMSC216.git &&\
 rm -rf ~/.vimrc ~/.vim && cp -rf ~/CMSC216/vim ~/.vim\
-&& cp ~/.vim/vimrc ~/.vimrc && rm -rf ~/CMSC216 ./.vim/vimrc
+&& cp ~/.vim/vimrc ~/.vimrc && rm -rf ~/CMSC216 ~/.vim/vimrc
 ```
 
 ###Basic Vim Instructions
