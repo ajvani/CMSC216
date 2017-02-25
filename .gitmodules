@@ -1,0 +1,12 @@
+[submodule "vim/bundle/accelerated-smooth-scroll"]
+	path = vim/bundle/accelerated-smooth-scroll
+	url = https://github.com/yonchu/accelerated-smooth-scroll
+[submodule "vim/bundle/auto-pairs"]
+	path = vim/bundle/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
+[submodule "vim/bundle/vim-buftabline"]
+	path = vim/bundle/vim-buftabline
+	url = https://github.com/ap/vim-buftabline
+[submodule "vim/bundle/lightline.vim"]
+	path = vim/bundle/lightline.vim
+	url = https://github.com/itchyny/lightline.vim
