@@ -1,3 +1,5 @@
+#Purpose
+I made this repository basically to hold my CMSC216 class notes, but I guess I can share my vim configuration as well. 
 #Vim
 ##Making it work
 ###Setup
@@ -40,11 +42,11 @@ $ rm -rf ~/.vim/bundle/<plugin_name>
     + Download a solarized theme for Mac Terminal ([here](https://github.com/tomislav/osx-terminal.app-colors-solarized) is one that works)
         * NOTE: I don't really like this because it messes up the syntax colors, but up to you. 
     + Remove or comment out these lines in .vimrc (REMOVES SOLARIZED SYNTAX FROM VIM):
-        ``` 
+``` 
         let g:solarize_termcolors=256
         set background=dark
         colorscheme solarized
-        ```
+```
     + Edit every single color in the terminal settings to match the solarized color format. (Pls don't do this, it's a waste of time)
 - If you want a different color theme, you can find a different one and git clone it into `~/.vim/bundle`
 
