@@ -51,6 +51,7 @@ $ rm -rf ~/.vim/bundle/<plugin_name>
 
     + Edit every single color in the terminal settings to match the solarized color format. (Pls don't do this, it's a waste of time)
 - If you want a different color theme, you can find a different one and git clone it into `~/.vim/bundle`
+- Official github repo: https://github.com/altercation/vim-colors-solarized
 
 ###Accelerated Smooth Scroll(PLUGIN)
 - Basically this just scrolls through your file real fast. Use `<Ctrl-U>/<Ctrl-B` for scroll up and `<Ctrl-D>/<Ctrl-F>` for scroll down
