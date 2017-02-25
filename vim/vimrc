@@ -1,0 +1,71 @@
+" File: .vimrc
+" Author: Anmol Jadvani
+
+set nocompatible
+set backspace=indent,eol,start
+
+" Display stuff
+set number
+set ruler
+set cursorline
+set history=1000
+filetype plugin indent on
+
+set expandtab
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+retab
+
+" syntax
+if !empty(&t_Co) || has("gui running")
+	syntax on
+endif
+
+" Mouse works
+if has("mouse")
+	set mouse=a
+endif
+
+"Using pathogen for the plugins
+set rtp+=~/.vim/bundle/pathogen
+execute pathogen#infect()
+
+function! ToggleExplore()
+    if exists("t:buf_num")
+        let win_num = bufwinnr(t:buf_num)
+        if win_num != -1
+            let curr_win = winnr()
+            exec win_num . 'wincmd w'
+            bp
+            exec curr_win . 'wincmd w'
+            unlet t:buf_num
+        else
+            unlet t:buf_num
+        endif
+    else
+        exec 'wincmd w'
+        Explore
+        let t:buf_num = bufnr("%")
+    endif
+endfunction
+
+map <silent> <C-n> :call ToggleExplore()<CR>
+
+" Status line
+set laststatus=2
+set ttimeoutlen=10
+let g:lightline = {
+    \ 'colorscheme': 'wombat',
+    \ }
+set noshowmode
+
+" Mapping buffer shortcuts
+map <silent> <C-o> :bp<CR>
+map <silent> <C-p> :bn<CR>
+nnoremap q :bp\|bd #<CR>
+
+" Solarized theme
+let g:solarize_termcolors=256
+set background=dark
+colorscheme solarized
