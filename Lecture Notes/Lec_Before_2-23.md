@@ -202,7 +202,7 @@ int **r = &p;
 
 ##Pointers and Arrays
 ```c
-in a[3] = {10, 20, 30};
+int a[3] = {10, 20, 30};
 int *p = a; 
 ```
 Some cool things about this: 
