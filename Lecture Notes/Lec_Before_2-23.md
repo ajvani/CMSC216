@@ -1,9 +1,9 @@
-#Intro
-##Preprocessor
+# Intro
+## Preprocessor
 - Used to make sure program parts see declarations the need
 - Directives start with '#' and don't end it ';'
 
-##Data Types
+## Data Types
 - char, short int, long int (signed/unsigned)
 - float, double
 - Pointers (*)
@@ -11,27 +11,27 @@
 - Union {}
 - Forgetting to initialize variables might give it a random value
 
-###General Rule For Sizes
+### General Rule For Sizes
 ```c
 sizeof(short) <= sizeof(int) <= sizeof(long)
 sizeof(float) <= sizeof(double) <= sizeof(long double)
 ```
 
-##Arithmetic
+## Arithmetic
 - Similar to java, casting exists, does integer division (3/2 == 1)
 
-##Booleans
+## Booleans
 - 0 is false, anything else is true
 - Same logic operators as java (!, &&, ||) and comparisons (<=, >=, ...)
     + Logic operators return 1 (true) or 0 (false)
 
-##Random List of Placeholders
+## Random List of Placeholders
 - `%d` = decimal
 - `%f` = float
 - `%c` = char
 - `%s` = string
 
-##Input
+## Input
 - Use `scanf`
 - General layout: 
 
@@ -42,16 +42,16 @@ scanf("%_", &var);
 - `&` receives memory location
 - `scanf` returns the number of values it reads
 
-##Functions
+## Functions
 - If functions are defined after `main`, they need to be declared
 - Functions cannot be overriden/overloaded
 
-##Scopes
+## Scopes
 C has two types of scopes: 
 - Block Scope: a var declared within a block, {}
 - File Scope: a var declared globally
 
-##Memory Layout
+## Memory Layout
 | |
 |:-----:|
 |STACK|
@@ -70,19 +70,19 @@ C has two types of scopes:
 - Data: Globals/Statics
 - Text: Compiled code and constants
 
-##Linkage
+## Linkage
 A property of an identifier that determines if multiple declarations of that refer to the same variable.
 ###Types of Linkage
 - None: all declarations of an identifier refer to different entities
 - Internal: all declarations of an identifier inside a given file refer to the same entity, but declarations accross files refer to different entities
 - External: all declarations refer to the same entities (Default)
 
-##Static
+## Static
 - `static` function means internal usage only. You can only use it inside the same file. 
 - `static` variable also means internal usage only. 
 By default, it can be used anywhere. 
 
-##Enumerated Types
+## Enumerated Types
 ```c
 enum Suit {
     SPADES, HEARTS, DIAMONDS=42, CLUBS
@@ -91,7 +91,7 @@ enum Suit {
 enum Suit suit1 = SPADES; 
 ```
 
-##Implicit Type Conversion
+## Implicit Type Conversion
 Arithmetic operators require their operands to be of the same type to perform the operation 
 
 `int` is actually the "smallest" type used. 
@@ -100,7 +100,7 @@ Heirarchy of types:
 - Wide over small
 - Unsigned over signed
 
-##Pointers
+## Pointers
 - Pointer is memory address reference
 - Pointer variabls are variables whose value is equal to the address
 - Pointers perform manipulation of memory by accessing items at the address
@@ -141,7 +141,7 @@ Without pointers, the swap would only occur with the local variabls of the funct
 
 - If you use a gabage pointer (i.e. a pointer to null), you get a Seg Fault
 
-##Arrays
+## Arrays
 - Elements are next to each other in memory
 - No length operator
 
@@ -155,7 +155,7 @@ int main() {
 - Global arrays are initialized to 0, and are garbage in a function
 - If you initialize an array with less elemnts, then the rest of the elements are initialized to 0
 
-###2D Arrays
+### 2D Arrays
 - Next to each other in memory
 - `int b[rows][cols] = {{0}, {0}}` is a 2D array of 0s
 - `char p[2][3]` is either a 2D array of chars or 1D array of strings
@@ -166,7 +166,7 @@ int main() {
 | 0 | M | i | k | 
 | 2 | e | \0 |  | 
 
-##Constants
+## Constants
 - `const` = variable can't be changed
 - Something confusing: 
 
@@ -180,13 +180,13 @@ int main() {
 - Cannot change what p2 is pointing to, but can change the value of whatever it is pointing to. 
 - Cannot change what p3 is pointing to, nor can you change the value of what p3 is pointing to
 
-##Generic Pointers
+## Generic Pointers
 - `void *` can point to any type
 - Cannot dereference `void *`
     + Need to cast or redefine to a real pointer type
     + Good for parameters in functions
 
-##Pointers to pointers
+## Pointers to pointers
 - Useful in function parameters
 
 ```c
@@ -200,7 +200,7 @@ int **r = &p;
     + `**r = 9` -> makes i = 9
     + `*r = &j` -> makes p point to j
 
-##Pointers and Arrays
+## Pointers and Arrays
 ```c
 int a[3] = {10, 20, 30};
 int *p = a; 
@@ -211,7 +211,7 @@ Some cool things about this:
 - Pointers are literally the same as arrays
     + `p[0]` is equivalent to `a[0]`, `p[1]` is equivalent to `a[1]` ... 
 
-##Strings
+## Strings
 - Literally just an array of char with a '\0' at the end
 - `scanf` reads strings with '%s'
     + Does not read spaces, registers with newline
@@ -238,7 +238,7 @@ To:
 | C | H | E | R | R | Y | \0 | K | E | \0 |
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 
-##Structures
+## Structures
 `typedef type aliasName;` -> `typedef double Dollars`
 - Lets you initialize var to `Dollars`
 - Different from `#define` because its not in the processor
