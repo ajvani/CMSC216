@@ -1,6 +1,6 @@
-#Lec 3-9
+# Lec 3-9
 
-##Dynamic Memory Allocation
+## Dynamic Memory Allocation
 ```c
 /* max num of characters in a name */
 #define MAX_LEN 20
@@ -34,7 +34,7 @@ int main() {
 - `free(NULL)` is a valid statement
 - If you have pointer `p` that points to a space in memory, you can't do things like `p++; free(p)` -> gives error
 
-##Function Pointers
+## Function Pointers
 
 - If you have function: 
 
