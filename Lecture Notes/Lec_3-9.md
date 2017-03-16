@@ -1,4 +1,4 @@
-# Lec 3-9
+# Lecture 3-9
 
 ## Dynamic Memory Allocation
 ```c

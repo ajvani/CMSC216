@@ -1,4 +1,4 @@
-# Lec_3-7
+# Lecture 3-7
 
 ## Compiling a Program
 - Source file is first preprocessed
