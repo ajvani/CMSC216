@@ -64,10 +64,10 @@ set t_Co=256
 " Mapping buffer shortcuts
 map <silent> <C-o> :bp<CR>
 map <silent> <C-p> :bn<CR>
-imap <silent> <C-o> <Esc> :q\|bp<CR>
-imap <silent> <C-p> <Esc> :q\|bn<CR>
-vmap <silent> <C-o> <Esc> :q\|bp<CR>
-vmap <silent> <C-p> <Esc> :q\|bn<CR>
+imap <silent> <C-o> <Esc> :w\|bp<CR>
+imap <silent> <C-p> <Esc> :w\|bn<CR>
+vmap <silent> <C-o> <Esc> :w\|bp<CR>
+vmap <silent> <C-p> <Esc> :w\|bn<CR>
 nnoremap q :bp\|bd #<CR>
 
 " Solarized theme
